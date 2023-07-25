@@ -1,7 +1,7 @@
 import React from 'react';
-import NoMatchContent from '../componets/NoMatch/NoMatchContent';
-import Header from '../componets/Layout/Header';
-import Footer from '../componets/Layout/Footer';
+import NoMatchContent from '../components/NoMatch/NoMatchContent';
+import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer';
 
 function NoMatch() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexRoutes from "./componets/Routes/Routes";
+import IndexRoutes from "./Routes/Routes";
 
 function App() {
   return (<IndexRoutes />)

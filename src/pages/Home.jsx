@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../componets/Layout/Header';
-import HomeBanner from '../componets/Home/HomeBanner'
+import Header from '../components/Layout/Header';
+import HomeBanner from '../components/Home/HomeBanner'
 //import DisplayCards from '../componets/Home/DisplayCards'
-import Footer from '../componets/Layout/Footer';
+import Footer from '../components/Layout/Footer';
 
 function Home() {
     return (
