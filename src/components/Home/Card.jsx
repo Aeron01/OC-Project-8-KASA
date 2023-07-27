@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Card(id, title, cover) {
+function Card({id, title, cover}) {
     return (
-        <li className='housing'>
+        <li key={id} className='housing'>
             <a href={'/housing/' + id}>
                 <figure className='housing_figure'>
                     <img src={cover} alt={title} className='housing_figure_cover' />
