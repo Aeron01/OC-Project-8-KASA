@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Layout/Header';
 import HomeBanner from '../components/Home/HomeBanner'
-//import DisplayCards from '../componets/Home/DisplayCards'
+import DisplayCards from '../components/Home/DisplayCards'
 import Footer from '../components/Layout/Footer';
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
         <>
             <Header />
             <HomeBanner />
-            {/*<DisplayCards />*/}
+            <DisplayCards />
             <Footer />
         </>
     )
