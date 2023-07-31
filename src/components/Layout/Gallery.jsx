@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-const arrowLeft = <FontAwesomeIcon icon={faAngleLeft} />;
-const arrowRight = <FontAwesomeIcon icon={faAngleRight} />;
+const arrowLeft = <FontAwesomeIcon icon={faChevronLeft} />;
+const arrowRight = <FontAwesomeIcon icon={faChevronRight} />;
 
 function Gallery(props){
     const [slideIdx, setSlideIdx] = useState(0);
@@ -11,7 +11,7 @@ function Gallery(props){
     function imgSize() {
         const carouselImg = document.querySelector('.carousel_container img');
         if(!carouselImg){
-            return(0);
+            return 0;
         }
         return carouselImg.width;
     }
@@ -36,7 +36,7 @@ function Gallery(props){
         <div className='carousel'>
             <div className='carousel_container' style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
                 {props.img.map((picture, i) =>
-                    <img className="carousel_container_img" src="{picture}" alt="banniere-page-logement" key={i} />
+                    <img className="carousel_container_img" src={picture} alt="banniere-page-logement" key={i} />
                 )}
             </div>
             {props.img.length > 1 && <>

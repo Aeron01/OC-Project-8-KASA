@@ -3,7 +3,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import housings from '../../datas/logements.json';
 import Collapse from '../Layout/Collapse'
 import Gallery from '../Layout/Gallery';
-//import RatingScale from './RatingScale';
+import RatingScale from './RatingScale';
 
 function HousingPage(){
 
@@ -38,9 +38,9 @@ function HousingPage(){
                             <p className='housing_page_header_hoster_infos_name'>{housing.host.name}</p>
                             <img className='housing_page_header_hoster_infos_img' src={housing.host.picture} alt="host-cover" />
                         </div>
-                        {/*<RatingScale
+                        <RatingScale
                             scaleValue={housing.rating}
-                        />*/}
+                        />
                 </article>
             </header>
 
