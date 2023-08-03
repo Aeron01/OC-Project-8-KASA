@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom'
-import logo from '../../styles/assets/logo-kasa.svg'
 
 function Header() {
+    const logo = '../../styles/assets/logo-kasa.svg'
     return (
         <header className='header'>
             <div className='header_logo'>

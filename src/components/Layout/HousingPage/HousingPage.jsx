@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
-import housings from '../../datas/logements.json';
-import Collapse from '../Layout/Collapse'
-import Gallery from '../Layout/Gallery';
-import RatingScale from './RatingScale';
+import Collapse from '../../Collapser/Collapse'
+import Gallery from '../Gallery';
+import RatingScale from '../../RatingScale/RatingScale';
+import QueryLogements from '../../../api/fetch';
 
 function HousingPage(){
+    const housings = QueryLogements()
 
     const {id} = useParams()
     const housing = housings.find(housing => housing.id === id)

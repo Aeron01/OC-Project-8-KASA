@@ -1,7 +1,6 @@
 @import 'variables';
 
 .footer {
-    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -10,15 +9,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 24px 0;
+    gap: 16px;
 
-    &_logo {
-        margin-top: 24px;
+    &_logo {    
         width: 80px;
     }
 
     &_text {
         color: white;
         font-size: 15px;
-        margin-bottom: 24px;
     }
 }

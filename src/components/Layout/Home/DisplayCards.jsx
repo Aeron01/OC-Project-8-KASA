@@ -1,8 +1,9 @@
 import React from 'react';
-import housings from '../../datas/logements.json';
-import Card from './Card'
+import Card from '../../Card/Card'
+import QueryLogements from '../api/fetch';
 
 function DisplayCards() {
+    const housings = QueryLogements()
     return (
         <section className='housings_container'>
             <ul className='housings_list'>

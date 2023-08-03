@@ -10,6 +10,12 @@
 @import 'HousingPage';
 @import 'NoMatch';
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
     position: relative;
     min-height: 100%;

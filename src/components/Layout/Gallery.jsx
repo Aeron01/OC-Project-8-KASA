@@ -1,51 +1,30 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-const arrowLeft = <FontAwesomeIcon icon={faChevronLeft} />;
-const arrowRight = <FontAwesomeIcon icon={faChevronRight} />;
-
-function Gallery(props){
-    const [slideIdx, setSlideIdx] = useState(0);
-
-    function imgSize() {
-        const carouselImg = document.querySelector('.carousel_container img');
-        if(!carouselImg){
-            return 0;
-        }
-        return carouselImg.width;
-    }
-
+function Gallery({img}){
+    const [index, setIndex] = useState(0);
+    
     function next(){
-        if(slideIdx === props.img.length - 1) {
-            setSlideIdx(0)
-        } else {
-            setSlideIdx(slideIdx + 1)
-        }
+       setIndex(current => (current + 1) % img.length)    
     }
 
     function prev(){
-        if(slideIdx === 0) {
-            setSlideIdx(props.img.length - 1)
-        } else {
-            setSlideIdx(slideIdx - 1)
-        }
+        setIndex(current => (current - 1 + img.length) % img.length)
     }
 
     return (
         <div className='carousel'>
-            <div className='carousel_container' style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
-                {props.img.map((picture, i) =>
-                    <img className="carousel_container_img" src={picture} alt="banniere-page-logement" key={i} />
-                )}
+            <div className='carousel_container'>
+                    <img className="carousel_container_img" src={img[index]} alt="banniere-page-logement" />
             </div>
-            {props.img.length > 1 && <>
+            {img.length > 1 && <>
             <div className='carousel_cmd'>
-                <i className='carousel_cmd_arrow' onClick={prev}>{arrowLeft}</i>
-                <i className='carousel_cmd_arrow' onClick={next}>{arrowRight}</i>
+                <i className='carousel_cmd_arrow' onClick={prev}><FontAwesomeIcon icon={faChevronLeft} /></i>
+                <i className='carousel_cmd_arrow' onClick={next}><FontAwesomeIcon icon={faChevronRight} /></i>
             </div>
             <div className='carousel_idx'>
-                {slideIdx + 1} / {props.img.length}
+                {index + 1} / {img.length}
             </div>
             </>}
         </div>
