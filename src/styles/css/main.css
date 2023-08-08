@@ -126,6 +126,12 @@
   position: sticky;
 }
 
+.about_collapses_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .housing_page {
   margin-bottom: 10rem;
 }

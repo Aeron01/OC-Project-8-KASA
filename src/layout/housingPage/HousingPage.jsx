@@ -1,29 +1,28 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
-import Collapse from '../../../molecules/collapser/collapse'
-import Gallery from '../gallery';
-import RatingScale from '../../ratingScale/ratingScale';
-import QueryLogements from '../../../api/fetch';
+import { useParams } from 'react-router-dom';
+import Collapser from '../../components/collapser/Collapser'
+import Carousel from '../../components/carousel/Carousel';
+import RatingScale from '../../components/ratingScale/RatingScale';
+import QueryLogements from '../../api/fetch';
+import Error from '../error/Error';
+
 
 function HousingPage(){
     const housings = QueryLogements()
     
     const {id} = useParams()
     const housing = housings.find(housing => housing.id === id)
-    if (housing === undefined) {
-        return <section className='error_page'>
-            <p className='error_page_subtitle'>Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
-            <NavLink title="Acceuil" end to='/home' className="error_page_link">Retourner sur la page d'accueil</NavLink>
-        </section>
+    if (!housing) {
+        return <Error message="Le logement n'existe pas !" />
     }
 
     return (
         <section key={housing.id} className='housing_page'>
-            <Gallery
+            <Carousel
                 img={housing.pictures}
             />
 
-            <header className='housing_page_header'>
+            <div className='housing_page_header'>
                 <article className='housing_page_header_infos'>
                     <h1 className='housing_page_header_infos_title'>{housing.title}</h1>
                     <h2 className='housing_page_header_infos_subtitle'>{housing.location}</h2>
@@ -43,23 +42,26 @@ function HousingPage(){
                             scaleValue={housing.rating}
                         />
                 </article>
-            </header>
+            </div>
 
             <article className='housing_page_collapses'>
                 <div className='housing_page_collapses_content'>
-                    <Collapse
+                    <Collapser
                         title="Description"
                         content={housing.description}
                     />
                 </div>
                 <div className='housing_page_collapses_content'>
-                    <Collapse
+                    <Collapser
                         title="Équipements"
-                        content={housing.equipments.map((equipment, i) => (
-                            <ul key={i}>
-                                <li> {equipment}</li>
+                        content={
+                            <ul>
+                            {
+                            housing.equipments.map((equipment, i) => 
+                                <li key={i}> {equipment}</li>
+                            )}
                             </ul>
-                        ))}
+                        }
                     />
                 </div>
             </article>
