@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Layout/Header';
-import HousingPage from '../components/Layout/HousingPage/HousingPage'
-import Footer from '../components/Layout/Footer';
+import Header from '../layout/header';
+import HousingPage from '../layout/housingPage/housingPage'
+import Footer from '../layout/footer';
 
 function Housing() {
     return (

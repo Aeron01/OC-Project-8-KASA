@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Layout/Header';
-import Footer from '../components/Layout/Footer';
-import Banner from '../components/Banner/Banner';
+import Header from '../layout/header';
+import Footer from '../layout/footer';
+import Banner from '../banner/banner';
 
 function About() {
     return(
@@ -9,7 +9,7 @@ function About() {
             <Header />
             <Banner
             title= "Chez vous, partout et ailleurs"
-            src='../../styles/assets/bannerHome-kasa.png'
+            src='../../../public/assets/bannerHome-kasa.png'
             />
             <Footer />
         </>

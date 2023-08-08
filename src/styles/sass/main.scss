@@ -1,20 +1,16 @@
-@import 'variables';
-@import 'fonts';
-@import 'About';
-@import 'Banner';
-@import 'Collapse';
-@import 'Footer';
-@import 'Gallery';
-@import 'Header';
-@import 'Home';
-@import 'HousingPage';
-@import 'NoMatch';
+@import './base/fonts';
+@import './base/variables';
+@import './components/banner';
+@import './components/collapse';
+@import './components/gallery';
+@import './components/noMatch';
+@import './layouts/footer';
+@import './layouts/header';
+@import './pages/about';
+@import './pages/home';
+@import './pages/housingPage';
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 html {
     position: relative;

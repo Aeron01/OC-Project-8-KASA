@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../../Card/Card'
-import QueryLogements from '../api/fetch';
+import Card from '../../card/card'
+import QueryLogements from '../../../api/fetch';
 
 function DisplayCards() {
     const housings = QueryLogements()

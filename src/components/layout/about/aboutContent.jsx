@@ -1,5 +1,5 @@
 import React from 'react';
-import Collapse from '../Collapser/Collapse';
+import Collapse from '../../../molecules/collapser/collapse';
 
 function AboutContent(){
 
