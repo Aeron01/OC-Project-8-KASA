@@ -7,7 +7,7 @@ function RatingScale({scaleValue}) {
 
     return (
         <div className="ratings">
-            {[1, 2, 3, 4, 5].map(r => <span key={r} className={"ratings_stars"+(scaleValue < r ? "_gray" : "" )}>
+            {[1, 2, 3, 4, 5].map(r => <span key={r} className={"ratings_stars"+(scaleValue < r ? "ratings_stars_gray" : "" )}>
                 <FontAwesomeIcon icon={faStar} />
                 </span> )}
         </div>
