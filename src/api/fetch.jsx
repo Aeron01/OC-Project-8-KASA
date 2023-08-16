@@ -16,7 +16,7 @@ function QueryLogements() {
         if(ls_data) {
             setData(ls_data)
         } else {
-    fetch("../../public/datas/logements.json")
+    fetch("../../datas/logements.json")
 
     .then(response => response.json())
     .then(data => {
