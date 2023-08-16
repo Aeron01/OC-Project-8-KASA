@@ -1,0 +1,13 @@
+.header {
+    position: relative;
+    background: white;
+}
+
+.footer {
+    background-color: rgb(25, 25, 25);
+}
+
+.footer_text {
+    color: white;
+    font-size: 15px;
+}

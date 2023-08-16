@@ -1,6 +1,6 @@
 @import '../base/variables';
 
-/*@media (max-width: 768px) and (max-width: 1090px) {
+@media (max-width: 768px) and (max-width: 1090px) {
     .housing {
         width: 50% !important;
     }
@@ -31,7 +31,7 @@
             }
         }
     }
-}*/
+}
 
 .housings {
     &_container {
@@ -92,7 +92,7 @@
                 width: 95%;
                 position: absolute;
                 left: 10px;
-                bottom: 0;
+                bottom: 0.8rem;
             }
         }
     }

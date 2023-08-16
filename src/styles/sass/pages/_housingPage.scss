@@ -1,5 +1,57 @@
 @import '../base/variables';
 
+@media (max-width: 768px) {
+    .housing_page {
+        min-height: 40rem !important;
+
+        &_header {
+            flex-direction: column;
+            margin-bottom: 0 !important;
+
+            &_infos {
+                &_tags {
+                    &_tag {
+                        margin-bottom: 1rem !important;
+                    }
+                }
+            }
+
+            &_hoster {
+                flex-direction: row-reverse !important;
+                align-items: center !important;
+                margin-top: 0 !important;
+                margin-bottom: 0.5rem;
+
+                &_infos {
+                    align-items: center;
+                    &_name {
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+        
+        &_collapses {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            &_content {
+                width: 100% !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+        
+    .ratings {
+        padding: 0 0.2rem 1rem 0 !important;
+        &_stars {
+            padding: 0 0.2rem 3rem 0 !important;
+        }
+    }
+}
+
 .housing_page {
     margin-bottom: 10rem;
     width: 95%;
@@ -34,6 +86,7 @@
                     font-size: 15px;
                     color: white;
                     background: $primary-color;
+                    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
                     margin: 0.1rem 0 0;
                     border-radius: 0.5rem;
                 }
@@ -49,6 +102,7 @@
             &_infos {
                 display: flex;
                 align-items: center;
+                
                 &_name {
                     width: 120px;
                     text-align: right;

@@ -1,7 +1,7 @@
 @import '../base/variables';
 @import '../base/fonts';
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     .header {
         width: 98% !important;
         &_logo {
@@ -9,28 +9,30 @@
                 width: 7rem !important;
             }
         }
-    }
-    &_nav {
-        & ul {
-            padding-left: 0;
-        }
-        &_link {
-            &_navlink {
-                padding: 0.2rem 0.3rem !important;
+        &_nav {
+            & ul {
+                padding-left: 0;
             }
-        }
-    }    
-}*/
+            &_link {
+                &_navlink {
+                    padding: 0.2rem 0.3rem !important;
+                }
+            }
+        }    
+    }
+}
 
 .header {
-    /*position: sticky;
-    top: 0;*/
+    position: sticky;
+    z-index: 10000;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
     margin: auto;
-    /*z-index: 10000;*/
+    background: hsla(240, 66%, 29%, 0.5);
+
     &_logo {
         &_img {
             width: 10rem;
@@ -42,20 +44,25 @@
             justify-content: center;
             align-items: center;
         }
+
         &_link {
             font-size: 19px;
             margin: 1rem 0.5rem;
+
             &_navlink {
                 padding: 0.2rem 0.7rem;
             }
+
             &_active {
                 font-family: 'Montserrat-Medium';
                 background: hsla(0, 100%, 82%, 0.2);
                 border-radius: 0.3rem;
                 padding: 0.2rem 0.7rem;
             }
+
             &_inactive {
                 transition: all 350ms ease-in-out;
+
                 &:hover {
                     font-family: 'Montserrat-Medium';
                     background: hsla(0, 100%, 82%, 0.2);
