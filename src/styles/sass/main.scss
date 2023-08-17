@@ -12,6 +12,11 @@
 @import './base/normalize';
 
 
+@media (max-width: 768px) {
+    body {
+        margin-top: 20px;
+    }
+}
 
 html {
     position: relative;
@@ -22,6 +27,10 @@ html {
     color: $primary-color;
     font-family: 'Montserrat-Regular';
     background: $bg-color;
+}
+
+body {
+    margin-top: 45px;
 }
 
 h1,

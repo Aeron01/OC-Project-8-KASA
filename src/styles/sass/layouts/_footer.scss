@@ -1,23 +1,47 @@
 @import '../base/variables';
 
+@media (max-width: 768px) {
+    .footer {
+        &_container-logo {
+            height: 85px !important;
+            width: 134px !important;
+
+            &_logo {
+                width: 39px;
+            }
+        }
+    }
+}
+
 .footer {
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgb(25, 25, 125);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+    &_container-logo {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px 0;
+    /*padding: 24px;*/
     gap: 16px;
+    width: auto;
+    height: auto;
 
-    &_logo {    
-        width: 80px;
-    }
+        &_logo {    
+            width: 80px;
+            height: auto;
+        }
 
-    &_text {
-        color: $primary-color;
-        font-size: 15px;
+        &_text {
+            color: $primary-color;
+            font-size: 15px;
+            text-align: center;
+        }
     }
 }
