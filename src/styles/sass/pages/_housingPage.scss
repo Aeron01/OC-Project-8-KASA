@@ -132,8 +132,10 @@
             margin: 1rem 0;
             width: 47%;
             margin-bottom: 0;
-
+            
             & ul {
+                display: flex;
+                flex-direction: column;
                 margin: 0;
             }
         }

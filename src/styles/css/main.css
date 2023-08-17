@@ -26,6 +26,8 @@
 .banner_title {
   position: absolute;
   z-index: 1000;
+  color: blue;
+  font-size: 18px;
 }
 .banner_img {
   position: relative;
@@ -471,6 +473,8 @@
   margin-bottom: 0;
 }
 .housing_page_collapses_content ul {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 

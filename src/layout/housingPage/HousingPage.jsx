@@ -6,7 +6,6 @@ import RatingScale from '../../components/ratingScale/RatingScale';
 import QueryLogements from '../../api/fetch';
 import Error from '../error/Error';
 
-
 function HousingPage(){
     const housings = QueryLogements()
     
