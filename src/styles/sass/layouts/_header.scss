@@ -24,16 +24,13 @@
 }
 
 .header {
-    position: sticky;
-    z-index: 10000;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
     height: 68px;
     margin: auto;
-    background: hsla(240, 66%, 29%, 0.5);
+    background: transparent;
 
     &_logo {
         &_img {
@@ -61,8 +58,6 @@
             &_active {
                 font-family: 'Montserrat-Medium';
                 text-decoration: underline $primary-color;
-                /*background: hsla(0, 100%, 82%, 0.2);
-                border-radius: 0.3rem;*/
                 padding: 0.2rem 0.7rem;
             }
             
@@ -72,8 +67,6 @@
                 
                 &:hover {
                     font-family: 'Montserrat-Medium';
-                    /*background: hsla(0, 100%, 82%, 0.2);
-                    border-radius: 0.3rem;*/
                     padding: 0.2rem 0.7rem;
                 }
             }

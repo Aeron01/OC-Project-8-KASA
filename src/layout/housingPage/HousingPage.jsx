@@ -11,6 +11,7 @@ function HousingPage(){
     
     const {id} = useParams()
     const housing = housings.find(housing => housing.id === id)
+    
     if (!housing) {
         return <Error message="Le logement n'existe pas !" />
     }

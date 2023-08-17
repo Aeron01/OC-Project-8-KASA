@@ -16,14 +16,14 @@ function QueryLogements() {
         if(ls_data) {
             setData(ls_data)
         } else {
-            fetch("../../datas/logements.json")
+            fetch("./datas/logements.json")
                 .then(response => response.json())
                 .then(data => {
                     localStorage.setItem('logements', JSON.stringify(data));
                     setData(data)
                 })
                 .catch(error => {
-                    window.location.href = `${process.env.PUBLIC_URL}/error`;
+                    setData(null);
                 })
         }
     }, [])

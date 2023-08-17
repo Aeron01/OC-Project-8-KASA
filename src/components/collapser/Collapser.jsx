@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
 import { faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
-import "./index.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DrawChevron({down}) {
