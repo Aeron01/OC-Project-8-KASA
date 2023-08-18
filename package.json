@@ -1,6 +1,6 @@
 {
   "name": "kasa-api",
-  "version": "0.9.800",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
