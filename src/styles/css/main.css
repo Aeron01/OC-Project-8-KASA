@@ -385,6 +385,7 @@
   }
   .housing_page_header_infos_tags_tag {
     margin-bottom: 1rem !important;
+    width: 170px !important;
   }
   .housing_page_header_hoster {
     flex-direction: row-reverse !important;
@@ -442,14 +443,20 @@
 .housing_page_header_infos_tags {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .housing_page_header_infos_tags_tag {
-  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
   color: white;
   background: #ff6060;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
   margin: 0.1rem 0 0;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
 }
 .housing_page_header_hoster {
   display: flex;

@@ -28,7 +28,7 @@ function HousingPage(){
                     <h2 className='housing_page_header_infos_subtitle'>{housing.location}</h2>
                     <div className='housing_page_header_infos_tags'>
                         {housing.tags.map((tag, i) => (
-                            <p key={i} className='housing_page_header_tags_infos_tag'>{tag}</p>
+                            <p key={i} className='housing_page_header_infos_tags_tag'>{tag}</p>
                         ))}
                     </div>
                 </article>
